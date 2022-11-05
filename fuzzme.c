@@ -17,6 +17,7 @@ int fuzzme(char *buf)
 
 #define BUFSZ 256
 
+/*
 int main(int argc, char** argv)
 {
     char buf[BUFSZ] = { 0 };
@@ -40,5 +41,10 @@ int main(int argc, char** argv)
     fclose(f);
 
     return 0;
+}
+*/
+
+int LLVMFuzzerTestOneInput(char* data, size_t size){
+    fuzzme(data);
 }
 
